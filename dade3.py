@@ -1,4 +1,4 @@
-# COMPLETE DATA-MINING PROJECT
+# DATA-MINING PROJECT (NOT COMPLETE YET)
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,8 +17,6 @@ from sklearn.metrics import (accuracy_score, precision_score, recall_score,
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 
-from sklearn.decomposition import PCA
-
 plt.rcParams['xtick.labelsize']= 8
 plt.rcParams['ytick.labelsize']= 8
 # Set display options
@@ -35,7 +33,7 @@ def save_and_show_plot(filename, tight=True):
     plt.savefig(f'plots/{filename}', dpi=150, bbox_inches='tight' if tight else None)
     plt.show()
 
-# 2. LOAD DATA
+# LOAD DATA
 print("="*60)
 print("1. LOADING DATA")
 print("="*60)
@@ -50,7 +48,7 @@ print(df.describe(include=[np.number]))
 print("\nBasic statistics (categorical):")
 print(df.describe(include=['object']))
 
-# 3. PREPROCESSING
+# PREPROCESSING
 print("\n" + "="*60)
 print("2. PREPROCESSING")
 print("="*60)
@@ -204,7 +202,7 @@ sns.heatmap(corr_matrix, annot=False, cmap='coolwarm', linewidths=0.5)
 plt.title('Correlation Matrix of All Features')
 save_and_show_plot('correlation_heatmap.png')
 
-# 4. EXPLORATORY DATA ANALYSIS (EDA) 
+# EXPLORATORY DATA ANALYSIS (EDA) 
 print("\n" + "="*60)
 print("3. EXPLORATORY DATA ANALYSIS")
 print("="*60)
@@ -276,7 +274,7 @@ print("  - Use oversampling (SMOTE) or undersampling.")
 print("  - Use stratified cross-validation and evaluation metrics like F1-weighted, ROC-AUC.")
 print("  - Consider using a cost-sensitive learning approach.")
 
-# 5. CLASSIFICATION MODELS 
+#CLASSIFICATION MODELS 
 print("\n" + "="*60)
 print("4. CLASSIFICATION MODELS")
 print("="*60)
@@ -388,7 +386,7 @@ From the EDA we observed:
 """)
 
 
-# 6. BONUS: TIME COMPARISON
+# TIME COMPARISON
 print("\n" + "="*60)
 print("6. BONUS: PREPROCESSING TIME COMPARISON")
 print("="*60)
